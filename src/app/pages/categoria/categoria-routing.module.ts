@@ -5,7 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', component: CategoriaListComponent},
-  { path: 'new', component: CategoriaFormComponent}
+  { path: 'new', component: CategoriaFormComponent},
+  { path: ':id', component: CategoriaFormComponent }
 ];
 
 @NgModule({
