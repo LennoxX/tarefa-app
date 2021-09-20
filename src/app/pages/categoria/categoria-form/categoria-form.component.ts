@@ -13,7 +13,7 @@ export class CategoriaFormComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.id = new FormControl('')
     this.nome = new FormControl('', Validators.required)
     this.categoriaForm = new FormGroup({

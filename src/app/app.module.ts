@@ -16,11 +16,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     SharedModule,
     RouterModule,
+    FormsModule,
     ReactiveFormsModule,
-    FormsModule
   ],
   exports: [
-    RouterModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
