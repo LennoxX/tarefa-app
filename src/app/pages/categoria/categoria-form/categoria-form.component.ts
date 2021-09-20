@@ -24,7 +24,7 @@ export class CategoriaFormComponent implements OnInit {
       id: this.id,
       nome: this.nome,
     })
-    this.idUrl = +this.activatedRoute.snapshot.params['id']
+    this.idUrl = this.activatedRoute.snapshot.params['id']
     console.log(this.idUrl)
     if(!(this.idUrl == undefined)){
       this.load()
@@ -34,7 +34,7 @@ export class CategoriaFormComponent implements OnInit {
   salvarForm() {
     if (this.categoriaForm.valid) {
       Object.assign(this.categoria, this.categoriaForm.value)
-      if(this.idUrl){
+      if(this.idUrl == undefined){
         this.create()
       }else{
         this.update()
@@ -58,7 +58,7 @@ export class CategoriaFormComponent implements OnInit {
 
   update(){
     console.log(this.categoria)
-    this.httpClient.put("http://localhost:3000/categoria", this.categoria).subscribe((categoria) => {
+    this.httpClient.put("http://localhost:3000/categoria/"+this.idUrl, this.categoria).subscribe((categoria) => {
       console.log(categoria)
     })
   }
