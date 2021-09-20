@@ -30,7 +30,7 @@
                         <input formControlName="nome" class="form-control" placeholder="Digite aqui o nome da categoria" />
                     </div>
                 </div>
-                <button type="submit" class="btn btn-sm btn-success float-right">Enviar</button>
+                <button [disabled]="categoriaForm.invalid" type="submit" class="btn btn-sm btn-success float-right">Enviar</button>
             </form>
             
         </div>

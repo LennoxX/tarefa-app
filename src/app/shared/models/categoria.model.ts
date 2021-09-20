@@ -1,4 +1,4 @@
 export class Categoria{
-    constructor(private id?:number, private nome?:string){}
+    constructor(public id?:number, public nome?:string){}
     
 }
